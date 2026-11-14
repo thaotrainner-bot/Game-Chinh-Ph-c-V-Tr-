@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { StageModals } from './components/HangarModal';
 import { AMMO_TYPES, AmmoId, GameState, SHIPS, ShipId } from './types/game';
 import { BossChicken, ChickenEnemy, Meteor, Player } from './utils/actors';
@@ -1275,6 +1276,7 @@ export default function App() {
           onOpenHangar={() => engineRef.current?.openHangar()}
         />
       </main>
+      <SpeedInsights />
     </div>
   );
 }
